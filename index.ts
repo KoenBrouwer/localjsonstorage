@@ -16,7 +16,7 @@ class LocalJsonStorage extends Storage {
      */
     setItem(data: any, key: string): void {
         if (typeof data !== "string") {
-            data = this.prepareData(data);
+            data = JSON.stringify(data);
         }
         localStorage.setItem(key, data);
     }
@@ -49,12 +49,6 @@ class LocalJsonStorage extends Storage {
      */
     removeItem(key: string): void {
         return localStorage.removeItem(key);
-    }
-
-    /* ---------- */
-
-    private prepareData(data: any): string {
-        return JSON.stringify(data);
     }
 
 }

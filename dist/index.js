@@ -33,7 +33,7 @@ var LocalJsonStorage = /** @class */ (function (_super) {
      */
     LocalJsonStorage.prototype.setItem = function (data, key) {
         if (typeof data !== "string") {
-            data = this.prepareData(data);
+            data = JSON.stringify(data);
         }
         localStorage.setItem(key, data);
     };
@@ -66,10 +66,6 @@ var LocalJsonStorage = /** @class */ (function (_super) {
      */
     LocalJsonStorage.prototype.removeItem = function (key) {
         return localStorage.removeItem(key);
-    };
-    /* ---------- */
-    LocalJsonStorage.prototype.prepareData = function (data) {
-        return JSON.stringify(data);
     };
     return LocalJsonStorage;
 }(Storage));

@@ -25,6 +25,5 @@ declare class LocalJsonStorage extends Storage {
      * delete storage[key]
      */
     removeItem(key: string): void;
-    private prepareData;
 }
 export default LocalJsonStorage;
