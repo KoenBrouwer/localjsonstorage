@@ -69,4 +69,7 @@ var LocalJsonStorage = /** @class */ (function (_super) {
     };
     return LocalJsonStorage;
 }(Storage));
-exports.default = LocalJsonStorage;
+exports.LocalJsonStorage = LocalJsonStorage;
+exports.default = {
+    LocalJsonStorage: LocalJsonStorage
+};

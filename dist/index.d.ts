@@ -1,4 +1,4 @@
-declare class LocalJsonStorage extends Storage {
+export declare class LocalJsonStorage extends Storage {
     /**
      * value = storage[key]
      */
@@ -26,4 +26,7 @@ declare class LocalJsonStorage extends Storage {
      */
     removeItem(key: string): void;
 }
-export default LocalJsonStorage;
+declare const _default: {
+    LocalJsonStorage: typeof LocalJsonStorage;
+};
+export default _default;

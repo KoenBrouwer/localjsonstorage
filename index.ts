@@ -1,4 +1,4 @@
-class LocalJsonStorage extends Storage {
+export class LocalJsonStorage extends Storage {
 
     /**
      * value = storage[key]
@@ -25,14 +25,14 @@ class LocalJsonStorage extends Storage {
      * Returns the number of key/value pairs currently present in the list associated with the
      * object.
      */
-    get length(): number{
+    get length(): number {
         return localStorage.length;
     }
 
     /**
      * Empties the list associated with the object of all key/value pairs, if there are any.
      */
-    clear(){
+    clear() {
         return localStorage.clear();
     }
 
@@ -53,4 +53,6 @@ class LocalJsonStorage extends Storage {
 
 }
 
-export default LocalJsonStorage;
+export default {
+    LocalJsonStorage
+};
